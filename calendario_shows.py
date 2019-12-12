@@ -4,7 +4,7 @@ import holidays
 import sys
 from datetime import date, timedelta
 
-diasdasemana = ["Segunda", "Terca", "Quarta", "Quinta", "Sexta", "Sabado", "Domingo"]
+diasdasemana = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"]
 
 def days(start, end, step=timedelta(days=1)):
     curr = start
@@ -19,8 +19,8 @@ if __name__ == "__main__":
 
     for a in dias:
         if str(a) in holidays.Brazil():
-            print(str(a) + " - " + diasdasemana[a.weekday()] + " - Feriado")
-        elif a.weekday() in range(2,5):
-            print(str(a) + " - " + diasdasemana[a.weekday()])
+            print(str(a) + " | " + diasdasemana[a.weekday()] + " | Feriado |")
+        elif a.weekday() in range(2,7):
+            print(str(a) + " | " + diasdasemana[a.weekday()] + " | ")
             
                 
